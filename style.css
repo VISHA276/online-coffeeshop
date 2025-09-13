@@ -125,13 +125,25 @@ header .navbar {
     transition: 0.3 ease;
 }
 
+
 .navbar .nav-menu .nav-link:hover {
     background: var(--primary-color);
     background: var(--secondary-color);
 }
 
-.navbar :where(#menu-close-button, #menu-open-button) {
-    display: none;
+#menu-open-button,
+#menu-close-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
 }
 
 /* Hero section styling*/
@@ -497,7 +509,18 @@ header .navbar {
     margin: 0 5px;
     color: var(--white-color);
 }
+/* Responsive media query code for max-width 1024px */
+@media screen and (max-width: 1024px) {
+    .menu-section .menu-list {
+        gap: 60px;
+    }
 
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 3 - 60px);
+    }
+}
+
+/* Responsive media query code for max-width 900px */
 @media screen and (max-width: 900px) {
     :root {
         --font-size-m: 1rem;
@@ -515,27 +538,20 @@ header .navbar {
         width: 100%;
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.2);
-        /* इथे सुधारणा केली आहे */
+        z-index: 999;
     }
 
     .navbar #menu-close-button {
         position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 2rem;
-        color: white;
-        background: none;
-        border: none;
-        cursor: pointer;
+        right: 30px;
+        top: 30px;
     }
 
     .navbar #menu-open-button {
-        display: block;
         color: var(--white-color);
     }
 
     .navbar .nav-menu {
-        /* display: block; <- गरज नाही, flex आणि fixed पोझिशन आहे */
         position: fixed;
         left: -300px;
         top: 0;
@@ -567,19 +583,18 @@ header .navbar {
         justify-content: center;
     }
 
-    .hero-section .hero-detials:is(.subtitle, .description),
+    .hero-section .hero-details:is(.subtitle, .description),
     .about-section .about-details,
     .contact-section .contact-form {
         max-width: 100%;
     }
 
-    .hero-section .hero-detials .button {
+    .hero-section .hero-details .button {
         justify-content: center;
     }
 
     .hero-section .hero-image-wrapper {
-        max-width: 270px;
-        /* बदल: 27px → 270px */
+        max-width: 27px;
         margin-right: 0;
     }
 
@@ -597,23 +612,19 @@ header .navbar {
 
     .menu-section .menu-list {
         gap: 30px;
-        flex-wrap: wrap;
-        /* स्तंभ व्यवस्थित करायला */
     }
 
     .menu-section .menu-list .menu-item {
-        width: calc(50% - 15px);
-        /* दोन स्तंभ */
+        width: calc(100% / 2 - 30px);
     }
 
     .menu-section .menu-list .menu-item .menu-image {
         max-width: 200px;
     }
 
-    .gallery-section .gallary-list .gallary-item {
+    .gallery-section .gallery-list .gallery-item {
         gap: 30px;
-        width: calc(50% - 15px);
-        /* दोन स्तंभ */
+        width: calc(100% / 2 - 30px);
     }
 
     .contact-section .section-content {
@@ -622,14 +633,61 @@ header .navbar {
     }
 }
 
+/* मोबाईल डिव्हाइससाठी */
+@media (max-width: 768px) {
+  .nav-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .show-mobile-menu .nav-menu-wrapper {
+    right: 0;
+  }
+
+  #menu-open-button {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+
+  #menu-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+
 @media screen and (max-width: 640px) {
     .menu-section .menu-list {
         gap: 60px;
-        flex-wrap: wrap;
     }
 
     .menu-section .menu-list .menu-item,
-    .gallery-section .gallary-list .gallary-item {
+    .gallery-section .gallery-list .gallery-item {
         width: 100%;
     }
 

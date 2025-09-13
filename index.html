@@ -7,19 +7,21 @@
     <title>Coffee Shope Website</title>
     <!--------------------linking font awesome for icons------------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <!-----------------linking swiper css----------------------->
+    <!-----------------linking swiper css----------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <a href="#" class="nav-logo">
                 <h2 class="logo-text">Coffee</h2>
             </a>
-            <button id="menu-open-button">☰</button>
-            <nav class="nav-menu">
-            <button id="menu-close-button">×</button>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+
+            <div class="nav-menu-wrapper">
+                <button id="menu-close-button" class="fas fa-times"></button>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
@@ -40,7 +42,7 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            
+            </div>
         </nav>
     </header>
     <main>
@@ -59,8 +61,7 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
-                    <img src="coffee website images/coffee-hero-section.png" alt="Coffee Hero"
-                        class="hero-image">
+                    <img src="coffee website images/coffee-hero-section.png" alt="Coffee Hero" class="hero-image">
                 </div>
             </div>
         </section>
@@ -69,8 +70,7 @@
         <section class="about-section" id="about">
             <div class="section-content">
                 <div class="about-image-wrapper">
-                    <img src="coffee website images/about-image.jpg"
-                        alt="About" class="about-image">
+                    <img src="coffee website images/about-image.jpg" alt="About" class="about-image">
                 </div>
                 <div class="about-detials">
                     <h2 class="section-title">About Us</h2>
@@ -94,48 +94,43 @@
             <div class="section-content">
                 <ul class="menu-list">
                     <li class="menu-item">
-                        <img src="coffee website images/hot-beverages.png"
-                            alt="Hot Beverages" class="menu-image">
+                        <img src="coffee website images/hot-beverages.png" alt="Hot Beverages" class="menu-image">
                         <h3 class="name">Hot Beverages</h3>
                         <p class="text">Wide range of steaming hot coffee to make you fresh and light.</p>
                         <div class="Price">$30.00</div>
                         <a href="#" class="button">Add to cart</a>
                     </li>
                     <li class="menu-item">
-                        <img src="coffee website images/cold-beverages.png"
-                            alt="Cold Beverages" class="menu-image">
+                        <img src="coffee website images/cold-beverages.png" alt="Cold Beverages" class="menu-image">
                         <h3 class="name">Cold Beverages</h3>
                         <p class="text">Creamy and frothly cold coffee to make you cool.</p>
                         <div class="Price">$60.00</div>
                         <a href="#" class="button">Add to cart</a>
                     </li>
                     <li class="menu-item">
-                        <img src="coffee website images/refreshment.png"
-                            alt="Refreshment" class="menu-image">
+                        <img src="coffee website images/refreshment.png" alt="Refreshment" class="menu-image">
                         <h3 class="name">Refreshment</h3>
                         <p class="text">Fruit and icy refreshing deink to make feel refresh.</p>
                         <div class="Price">$40.00</div>
                         <a href="#" class="button">Add to cart</a>
                     </li>
                     <li class="menu-item">
-                        <img src="coffee website images/special-combo.png"
-                            alt="Special Combo" class="menu-image">
+                        <img src="coffee website images/special-combo.png" alt="Special Combo" class="menu-image">
                         <h3 class="name">Special Combo</h3>
                         <p class="text">Your favorits eating and drinking conbinations.</p>
                         <div class="Price">$150.00</div>
                         <a href="#" class="button">Add to cart</a>
                     </li>
                     <li class="menu-item">
-                        <img src="coffee website images/desserts.png"
-                            alt="Dessert" class="menu-image">
+                        <img src="coffee website images/desserts.png" alt="Dessert" class="menu-image">
                         <h3 class="name">Dessert</h3>
                         <p class="text">Satiate your palate and take you on a culinary treat.</p>
                         <div class="Price">$80.00</div>
                         <a href="#" class="button">Add to cart</a>
                     </li>
                     <li class="menu-item">
-                        <img src="coffee website images/burger-frenchfries.png"
-                            alt="Burger and Frenchfries" class="menu-image">
+                        <img src="coffee website images/burger-frenchfries.png" alt="Burger and Frenchfries"
+                            class="menu-image">
                         <h3 class="name">Burger and Frenchfries</h3>
                         <p class="text">Quick bites to satisfy your small size hunger.</p>
                         <div class="Price">$200.00</div>
@@ -152,16 +147,16 @@
                     <div class="slider-wrapper">
                         <ul class="testimonial-list swiper-wrapper">
                             <li class="testimonial swiper-slide">
-                                <img src="coffee website images/test img1.jpeg"
-                                    alt="User" class="user-image">
+                                <img src="coffee website images/test img1.jpeg" alt="User" class="user-image">
                                 <h3 class="name">Sarah Johnson</h3>
-                                <i class="feedback">"Loved the french roast. perfectly balanced and rich , will order again ."</i>
+                                <i class="feedback">"Loved the french roast. perfectly balanced and rich , will order
+                                    again ."</i>
                             </li>
                             <li class="testimonial swiper-slide">
-                            <img src="coffee website images/test img 2.jpg"
-                                    alt="User" class="user-image">
+                                <img src="coffee website images/test img 2.jpg" alt="User" class="user-image">
                                 <h3 class="name">Jhon Johnson</h3>
-                                <i class="feedback">"Loved the french roast. perfectly balanced and rich , will order again ."</i>
+                                <i class="feedback">"Loved the french roast. perfectly balanced and rich , will order
+                                    again ."</i>
                             </li>
                         </ul>
                         <div class="swiper-pagination"></div>
@@ -180,7 +175,7 @@
                     <li class="gallery-item">
                         <img src="coffee website images/black coffee.jpg" alt="Gallery" class="gallery-image">
                     </li>
-                     <li class="gallery-item">
+                    <li class="gallery-item">
                         <img src="coffee website images/omlate.jpg" alt="Gallery" class="gallery-image">
                     </li>
                     <li class="gallery-item">
@@ -211,7 +206,7 @@
                         <i class="fa-solid fa-location-crosshairs"></i>
                         <p>info@coffeshopwebsite.com</p>
                     </li>
-                     <li class="contact-info">
+                    <li class="contact-info">
                         <i class="fa-solid fa-location-crosshairs"></i>
                         <p>(123) 456-78909</p>
                     </li>
@@ -225,13 +220,15 @@
                     </li>
                     <li class="contact-info">
                         <i class="fa-solid fa-location-crosshairs"></i>
-                        <p><www class="vishakhaweb.com"></www></p>
+                        <p>
+                            <www class="vishakhaweb.com"></www>
+                        </p>
                     </li>
                 </ul>
                 <form action="#" class="contact-form">
                     <input type="text" placeholder=" Your name" class="form-input" required>
-                    <input type="email"  placeholder="Your email" class="form-input" required>
-                    <textarea  placeholder="Your message" class="form-input" required></textarea>
+                    <input type="email" placeholder="Your email" class="form-input" required>
+                    <textarea placeholder="Your message" class="form-input" required></textarea>
                     <button class="submit-button">Submit</button>
                 </form>
             </div>
